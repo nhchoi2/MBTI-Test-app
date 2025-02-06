@@ -27,7 +27,7 @@ if not df.empty:
     st.write(f"**MBTI 유형:** {mbti_type}")
     
     if st.button("📊 결과 분석 보기"):
-        st.experimental_set_query_params(page="results_visualization")
+        st.query_params["page"] = "results_visualization"
 else:
     st.info("아직 검사를 진행한 기록이 없습니다. 테스트를 시작해보세요!")
 
